@@ -1,0 +1,387 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1.PYTHON  与 C语言的重要的区别\n",
+    " \n",
+    " int a = 100\n",
+    " \n",
+    " \n",
+    " a = 100  动态类化（dynamic typing）\n",
+    " \n",
+    "2.input 引导用户输入的函数\n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "请输入一个数字：\n",
+      "這是你輸入的數字： \n"
+     ]
+    }
+   ],
+   "source": [
+    "a= input(\"请输入一个数字：\")\n",
+    "print(\"這是你輸入的數字：\",a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "迷宫世界 ![MNIST Examples](3.PNG)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "3.比较表达式(compare) ：使用比较运算符，或逻辑运算符返回布尔值   True   false\n",
+    "\n",
+    "and 与\n",
+    "\n",
+    "or 或\n",
+    "\n",
+    "not 非\n",
+    "\n",
+    "<  >  == != <= >= \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(7>6)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(10>11)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "not 9>6 "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "4.C语言与PYTHON的第二个区别：\n",
+    "\n",
+    "\n",
+    "C语言使用大括号表达程序块(code block)从属关系 \n",
+    "\n",
+    "\n",
+    "PYTHON使用tab缩进（indentation）表达程序块从属关系\n",
+    "\n",
+    "\n",
+    "\n",
+    "5.下面的代码表达了IF逻辑的并列，每个IF逻辑都是独立进行判断\n",
+    "\n",
+    "\n",
+    "if rightclear:\n",
+    "\n",
+    "    go right\n",
+    "    \n",
+    "if rightblocked:\n",
+    "\n",
+    "    go forward\n",
+    "    \n",
+    "if rightblocked and frontblocked:\n",
+    "\n",
+    "    go left\n",
+    "if rightblocked and frontblocked and leftblocked:\n",
+    "\n",
+    "    go back\n",
+    "    \n",
+    "下面的代码表达了IF逻辑的嵌套，内层代码的执行都依赖于外层的条件的满足\n",
+    "\n",
+    "\n",
+    "if rightclear:\n",
+    "\n",
+    "    go right\n",
+    "    \n",
+    "    if rightblocked:\n",
+    "    \n",
+    "        go forward\n",
+    "        \n",
+    "        if rightblocked and frontblocked:\n",
+    "        \n",
+    "            go left\n",
+    "            \n",
+    "            if rightblocked and frontblocked and leftblocked:\n",
+    "            \n",
+    "                go backward\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "老师视频录制的当前时间是?\n",
+      "答錯了！\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = input('老师视频录制的当前时间是?') ## input 函数返回字符串:\n",
+    "if a==\"12:00\":\n",
+    "    print(\"猜对了！\")\n",
+    "elif a==\"13:00\" or a==\"11:00\":\n",
+    "    print(\"差一點就對了！\")\n",
+    "else:\n",
+    "    print(\"答錯了！\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "佐罗传奇 ![MNIST Examples](2.PNG)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "if 往右走：\n",
+    "\n",
+    "    一直渲染\n",
+    "    \n",
+    "    if 往右走：\n",
+    "    \n",
+    "        一直渲染\n",
+    "       \n",
+    "            ......\n",
+    "             \n",
+    "while 往右走：\n",
+    "\n",
+    "    一直渲染树林\n",
+    "    \n",
+    "游戏结束\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5050\n"
+     ]
+    }
+   ],
+   "source": [
+    "## 1---100求和\n",
+    "result=0 # 求和结果\n",
+    "a=0  # jia shu\n",
+    "while a<=100:\n",
+    "    result=result+a # qiuhe \n",
+    "    a=a+1# leijia \n",
+    "print(result)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n",
+      "10\n",
+      "11\n",
+      "12\n",
+      "13\n",
+      "14\n",
+      "15\n",
+      "16\n",
+      "17\n",
+      "18\n",
+      "19\n",
+      "10\n",
+      "20\n",
+      "304\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "##\n",
+    "a=0\n",
+    "while True:\n",
+    "    print(a)\n",
+    "    a=a+1\n",
+    "    if a==20 :\n",
+    "        break\n",
+    "## for (int a=0;a<=10;a++)\n",
+    "\n",
+    "for i in [10,20,304,5]:##迭代器 0 11-1=10   便捷 容易 表达力差与WHILE循环\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "for循环：\n",
+    "知道循环次数的时候 \n",
+    "\n",
+    "使用迭代器\n",
+    "\n",
+    "我们可以用WHILE来重写我们的FOR\n",
+    "\n",
+    "不需要初始化循环变量\n",
+    "\n",
+    "WHILE循环：\n",
+    "\n",
+    "不知道的循环次数\n",
+    "\n",
+    "我们使用BREAK来跳出循环\n",
+    "\n",
+    "循环变量必须是初始化 \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "你在迷失森林里！\n",
+      "****************\n",
+      "****************\n",
+      " :)\n",
+      "****************\n",
+      "****************\n",
+      "向左还是向右? 向右\n",
+      "你迷路了！\n",
+      "****************\n",
+      "******       ***\n",
+      "  (╯°□°）╯︵ ┻━┻\n",
+      "****************\n",
+      "****************\n",
+      "Go 向左还是向右? 右\n",
+      "你迷路了！\n",
+      "****************\n",
+      "******       ***\n",
+      "  (╯°□°）╯︵ ┻━┻\n",
+      "****************\n",
+      "****************\n",
+      "Go 向左还是向右? 左\n",
+      "\n",
+      "你终于逃出迷失森林了!\n",
+      "\\o/\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = input(\"你在迷失森林里！\\n****************\\n****************\\n :)\\n****************\\n****************\\n向左还是向右? \")\n",
+    "while n == \"向右\" or n == \"右\":\n",
+    "    n = input(\"你迷路了！\\n****************\\n******       ***\\n  (╯°□°）╯︵ ┻━┻\\n****************\\n****************\\nGo 向左还是向右? \")\n",
+    "print(\"\\n你终于逃出迷失森林了!\\n\\o/\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
